@@ -1,0 +1,151 @@
+{
+	"info": {
+		"_postman_id": "9dbd7b94-7ac1-4e1c-8a7f-e2523290dcaa",
+		"name": "Blog-Website",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "37735588"
+	},
+	"item": [
+		{
+			"name": "Read All Blogs",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://blog-website-backend-phi.vercel.app/api/v1/blogs/readAllContent",
+					"protocol": "https",
+					"host": [
+						"blog-website-backend-phi",
+						"vercel",
+						"app"
+					],
+					"path": [
+						"api",
+						"v1",
+						"blogs",
+						"readAllContent"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Read Specific Blog",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:4000/api/v1/blogs/searchBlog/?authorName=cd",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"api",
+						"v1",
+						"blogs",
+						"searchBlog",
+						""
+					],
+					"query": [
+						{
+							"key": "authorName",
+							"value": "cd"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add Blog",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"authorName\":\"acd\",\n\"title\":\"hello\",\n\"content\":\"hello world\\ngood day\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://blog-website-backend-phi.vercel.app/api/v1/blogs/writeContent",
+					"protocol": "https",
+					"host": [
+						"blog-website-backend-phi",
+						"vercel",
+						"app"
+					],
+					"path": [
+						"api",
+						"v1",
+						"blogs",
+						"writeContent"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Blog",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"_id\":\"66c3662855c0bc5cec634050\",\n\"authorName\":\"cd\",\n\"title\":\n\"abc\",\n\"content\":\n\"content\"}\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://blog-website-backend-phi.vercel.app/api/v1/blogs/updateBlog",
+					"protocol": "https",
+					"host": [
+						"blog-website-backend-phi",
+						"vercel",
+						"app"
+					],
+					"path": [
+						"api",
+						"v1",
+						"blogs",
+						"updateBlog"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Blog",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "https://blog-website-backend-phi.vercel.app/api/v1/blogs/deleteBlog/66c36aafd0d8ec70841c366e/b2cd9553a8cb0c4a9dbdc9a8cf6c0772955a8a2601029694db7e61b9dcbc1ac0",
+					"protocol": "https",
+					"host": [
+						"blog-website-backend-phi",
+						"vercel",
+						"app"
+					],
+					"path": [
+						"api",
+						"v1",
+						"blogs",
+						"deleteBlog",
+						"66c36aafd0d8ec70841c366e",
+						"b2cd9553a8cb0c4a9dbdc9a8cf6c0772955a8a2601029694db7e61b9dcbc1ac0"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
