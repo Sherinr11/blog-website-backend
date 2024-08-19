@@ -1,17 +1,17 @@
 
 const router=require('express').Router();
 const blogControllers=require('../controllers/blogControllers');
-// const blogModel=require('../controllers/blogExpressController');
-router.get('/readAllContentsync',blogControllers.readBlogs
+router.get('/readAllContent',blogControllers.readBlogs
     );
-    router.get('/searchBlogsync',blogControllers.searchBlogs
+    router.get('/searchBlog',blogControllers.searchBlogs
     );
-    router.post('/writeContentsync',blogControllers.writeBlogs
+    router.post('/writeContent',blogControllers.writeBlogs
       
     )
-    router.put('/updateBlogsync',blogControllers.updateBlogs
+    router.put('/updateBlog',blogControllers.updateBlogs
        
     );
-    router.delete('/deleteBlogsync/:id',blogControllers.deleteBlog);
-   
+
+    router.delete('/deleteBlog/:id/:key', blogControllers.deleteBlog);
+
     module.exports=router;
