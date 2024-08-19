@@ -1,5 +1,8 @@
 const express=require('express');
+const cors = require('cors');
 const app=express();
+
+app.use(cors());
 const blogRoutes=require('./routes/blogRoutes');
 const conn=require("./services/db");
 conn.dbConnection();
