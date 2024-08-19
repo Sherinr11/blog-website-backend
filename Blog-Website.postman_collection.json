@@ -45,8 +45,8 @@
 						"api",
 						"v1",
 						"blogs",
-						"searchBlog",
-						""
+						"searchBlog"
+					
 					],
 					"query": [
 						{
