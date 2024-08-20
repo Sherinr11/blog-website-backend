@@ -1,3 +1,3 @@
 
 ## Entity Diagram
-![](assets/er.drawio.png)
+![](er.drawio.png)
