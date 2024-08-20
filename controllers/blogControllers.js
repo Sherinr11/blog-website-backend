@@ -6,7 +6,7 @@ const readBlogs = async (req, res) => {
         let result =  await BlogModel.find({}, { secretKey: 0 });
         res.status(200).json({ data: result, msg: "", err: "" });
     } catch (err) {
-        console.error("Error reading blogs:", err.message);
+        
         res.status(500).json({ data: "", msg: "Unable to read data", err: err.message });
     }
 };
@@ -20,7 +20,7 @@ const searchBlogs = async (req, res) => {
             res.status(200).json({ data: blogs, msg: "", err: "" });
         }
     } catch (err) {
-        console.error("Error searching blogs:", err.message);
+        
         res.status(500).json({ data: "", msg: "Unable to find data", err: err.message });
     }
 };
@@ -43,7 +43,7 @@ const writeBlogs = async (req, res) => {
             err: ""
         });
     } catch (err) {
-        console.error("Error writing blog:", err.message);
+    
         res.status(500).json({ data: "", msg: "Unable to write data", err: err.message });
     }
 };
@@ -68,7 +68,7 @@ const updateBlogs = async (req, res) => {
             res.status(200).json({ data: "", msg: "Data updated", err: "" });
         }
     } catch (err) {
-        console.error("Error updating blog:", err.message);
+       
         res.status(500).json({ data: "", msg: "Unable to update data", err: err.message });
     }
 };
@@ -94,7 +94,7 @@ const deleteBlog = async (req, res) => {
             res.status(200).json({ data: "", msg: "Blog deleted", err: "" });
         }
     } catch (err) {
-        console.error("Error deleting blog:", err.message);
+       
         res.status(500).json({ data: "", msg: "Unable to delete data", err: err.message });
     }
 };
